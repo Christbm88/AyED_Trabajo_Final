@@ -47,3 +47,20 @@ hr.solid {
     border-color: gainsboro;
     border-width: 2px;
 }
+
+#picked {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #000;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+li {
+    padding: 5px;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0px;
+}

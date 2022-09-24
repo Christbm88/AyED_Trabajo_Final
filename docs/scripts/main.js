@@ -9,7 +9,14 @@ function colorDistance(a, b) {
 }
 
 function update(color) {
-    $("#picked").css('background', color.toHex());
+    $("#picked")
+        .css('background-color', color.toHexString())
+        .css('display', 'inline-block')
+        .css('margin-right', '10px');
+
+    $("#TextColor")
+        .text(color.toHexString());
+
     var rgb = color.toRgb();
     var search = { red: rgb.r, green: rgb.g, blue: rgb.b };
     var nearest = tree.nearest(search, 10);
@@ -24,8 +31,8 @@ function update(color) {
             .css('background', c.hex)
             .css('display', 'inline-block')
             .css('margin-right', '10px')
-            .height('20px')
-            .width('20px');
+            .height('30px')
+            .width('30px');
         var $line = $("<li>").append($box).append(c.title);
         $list.append($line);
     }
