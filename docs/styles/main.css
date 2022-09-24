@@ -1,0 +1,49 @@
+body {
+    font-family: Ubuntu, Arial, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.grid-container {
+    display: grid;
+    /*grid-template-columns: auto auto auto;*/
+    grid-template-columns: auto auto;
+    padding: 5px;
+}
+
+.grid-container>div {
+    text-align: center;
+    padding: 5px 0;
+}
+
+.grid-item {
+    border-width: 2px;
+}
+
+.btn_link {
+    color: white;
+    font-size: 16px;
+    background: #3498db;
+    padding: 10px 10px 10px 10px;
+    text-decoration: none;
+}
+
+.btn_link:hover {
+    background: #3cb0fd;
+    text-decoration: none;
+}
+
+pre code {
+    background-color: #eee;
+    border: 1px solid #999;
+    display: block;
+    padding: 20px;
+}
+
+hr.solid {
+    border-top: 3px solid #bbb;
+}
+
+.grid-item-hr {
+    border-bottom: solid;
+    border-color: gainsboro;
+    border-width: 2px;
+}

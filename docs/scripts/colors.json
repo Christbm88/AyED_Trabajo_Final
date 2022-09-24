@@ -1,0 +1,582 @@
+var colors = [
+    {
+        "title": "Azul Alice",
+        "hex": "#F0F8FF"
+    },
+    {
+        "title": "Blanco antiguo",
+        "hex": "#FAEBD7"
+    },
+    {
+        "title": "Aqua",
+        "hex": "#00FFFF"
+    },
+    {
+        "title": "Aguamarina",
+        "hex": "#7FFFD4"
+    },
+    {
+        "title": "Azure",
+        "hex": "#F0FFFF"
+    },
+    {
+        "title": "Beige",
+        "hex": "#F5F5DC"
+    },
+    {
+        "title": "Bisque",
+        "hex": "#FFE4C4"
+    },
+    {
+        "title": "Black",
+        "hex": "#000000"
+    },
+    {
+        "title": "Almendra",
+        "hex": "#FFEBCD"
+    },
+    {
+        "title": "Azul",
+        "hex": "#0000FF"
+    },
+    {
+        "title": "Azul Violeta",
+        "hex": "#8A2BE2"
+    },
+    {
+        "title": "Marron",
+        "hex": "#A52A2A"
+    },
+    {
+        "title": "Madera",
+        "hex": "#DEB887"
+    },
+    {
+        "title": "Azul marino",
+        "hex": "#5F9EA0"
+    },
+    {
+        "title": "Verde claro",
+        "hex": "#7FFF00"
+    },
+    {
+        "title": "Chocolate",
+        "hex": "#D2691E"
+    },
+    {
+        "title": "Coral",
+        "hex": "#FF7F50"
+    },
+    {
+        "title": "Maiz",
+        "hex": "#6495ED"
+    },
+    {
+        "title": "Maizclaro",
+        "hex": "#FFF8DC"
+    },
+    {
+        "title": "Carmesi",
+        "hex": "#DC143C"
+    },
+    {
+        "title": "Cian",
+        "hex": "#00FFFF"
+    },
+    {
+        "title": "Azul oscuro",
+        "hex": "#00008B"
+    },
+    {
+        "title": "Cian oscuro",
+        "hex": "#008B8B"
+    },
+    {
+        "title": "Dorado oscuro",
+        "hex": "#B8860B"
+    },
+    {
+        "title": "Gris oscuro",
+        "hex": "#A9A9A9"
+    },
+    {
+        "title": "Verde oscuro",
+        "hex": "#006400"
+    },
+    {
+        "title": "Caqui oscuro",
+        "hex": "#BDB76B"
+    },
+    {
+        "title": "Magenta oscuro",
+        "hex": "#8B008B"
+    },
+    {
+        "title": "Verde oliva oscuro",
+        "hex": "#556B2F"
+    },
+    {
+        "title": "Naranja oscuro",
+        "hex": "#FF8C00"
+    },
+    {
+        "title": "Orquidea oscuro",
+        "hex": "#9932CC"
+    },
+    {
+        "title": "Rojo oscuro",
+        "hex": "#8B0000"
+    },
+    {
+        "title": "Salmon oscuro",
+        "hex": "#E9967A"
+    },
+    {
+        "title": "Verde mar oscuro",
+        "hex": "#8FBC8F"
+    },
+    {
+        "title": "Azul pizarra",
+        "hex": "#483D8B"
+    },
+    {
+        "title": "Gris oscuro",
+        "hex": "#2F4F4F"
+    },
+    {
+        "title": "Turquesa oscuro",
+        "hex": "#00CED1"
+    },
+    {
+        "title": "Violeta oscuro",
+        "hex": "#9400D3"
+    },
+    {
+        "title": "Rosado profundo",
+        "hex": "#FF1493"
+    },
+    {
+        "title": "Azul cielo profundo",
+        "hex": "#00BFFF"
+    },
+    {
+        "title": "Gris oscuro",
+        "hex": "#696969"
+    },
+    {
+        "title": "Azul gandul",
+        "hex": "#1E90FF"
+    },
+    {
+        "title": "Ladrillo",
+        "hex": "#B22222"
+    },
+    {
+        "title": "Blanco floral",
+        "hex": "#FFFAF0"
+    },
+    {
+        "title": "Verde bosque",
+        "hex": "#228B22"
+    },
+    {
+        "title": "Fucsia",
+        "hex": "#FF00FF"
+    },
+    {
+        "title": "Gris claro",
+        "hex": "#DCDCDC"
+    },
+    {
+        "title": "Blanco fantasma",
+        "hex": "#F8F8FF"
+    },
+    {
+        "title": "Dorado",
+        "hex": "#FFD700"
+    },
+    {
+        "title": "Dorado",
+        "hex": "#DAA520"
+    },
+    {
+        "title": "Gris (X11)",
+        "hex": "#BEBEBE"
+    },
+    {
+        "title": "Gris (W3C)",
+        "hex": "#808080"
+    },
+    {
+        "title": "Verde (X11)",
+        "hex": "#00FF00"
+    },
+    {
+        "title": "Verde (W3C)",
+        "hex": "#008000"
+    },
+    {
+        "title": "Verde amarillo",
+        "hex": "#ADFF2F"
+    },
+    {
+        "title": "Gotas de miel",
+        "hex": "#F0FFF0"
+    },
+    {
+        "title": "Rosado caliente",
+        "hex": "#FF69B4"
+    },
+    {
+        "title": "Rojo indio",
+        "hex": "#CD5C5C"
+    },
+    {
+        "title": "Indigo",
+        "hex": "#4B0082"
+    },
+    {
+        "title": "Marfil",
+        "hex": "#FFFFF0"
+    },
+    {
+        "title": "Caqui",
+        "hex": "#F0E68C"
+    },
+    {
+        "title": "Lavanda",
+        "hex": "#E6E6FA"
+    },
+    {
+        "title": "Lavender rubor",
+        "hex": "#FFF0F5"
+    },
+    {
+        "title": "Verde cesped",
+        "hex": "#7CFC00"
+    },
+    {
+        "title": "Amarillo limon",
+        "hex": "#FFFF54"
+    },
+    {
+        "title": "Limon chifon",
+        "hex": "#FFFACD"
+    },
+    {
+        "title": "Azul claro",
+        "hex": "#ADD8E6"
+    },
+    {
+        "title": "Coral claro",
+        "hex": "#F08080"
+    },
+    {
+        "title": "Cian claro",
+        "hex": "#E0FFFF"
+    },
+    {
+        "title": "Dorado claro",
+        "hex": "#FAFAD2"
+    },
+    {
+        "title": "Gris claro",
+        "hex": "#D3D3D3"
+    },
+    {
+        "title": "Verde claro",
+        "hex": "#90EE90"
+    },
+    {
+        "title": "Rosado claro",
+        "hex": "#FFB6C1"
+    },
+    {
+        "title": "Salmon claro",
+        "hex": "#FFA07A"
+    },
+    {
+        "title": "Mar verde claro",
+        "hex": "#20B2AA"
+    },
+    {
+        "title": "Celeste claro",
+        "hex": "#87CEFA"
+    },
+    {
+        "title": "Gris pizarra claro",
+        "hex": "#778899"
+    },
+    {
+        "title": "Azul pizarra claro",
+        "hex": "#B0C4DE"
+    },
+    {
+        "title": "Amarillo claro",
+        "hex": "#FFFFE0"
+    },
+    {
+        "title": "Lima (W3C)",
+        "hex": "#00FF00"
+    },
+    {
+        "title": "Verde Lima",
+        "hex": "#32CD32"
+    },
+    {
+        "title": "Lino",
+        "hex": "#FAF0E6"
+    },
+    {
+        "title": "Magenta",
+        "hex": "#FF00FF"
+    },
+    {
+        "title": "Maron (X11)",
+        "hex": "#B03060"
+    },
+    {
+        "title": "Maron (W3C)",
+        "hex": "#7F0000"
+    },
+    {
+        "title": "Aguamarina medio",
+        "hex": "#66CDAA"
+    },
+    {
+        "title": "Azul medio",
+        "hex": "#0000CD"
+    },
+    {
+        "title": "Orquidea medio",
+        "hex": "#BA55D3"
+    },
+    {
+        "title": "Morado medio",
+        "hex": "#9370DB"
+    },
+    {
+        "title": "Mar verde medio",
+        "hex": "#3CB371"
+    },
+    {
+        "title": "Azul pizarra medio",
+        "hex": "#7B68EE"
+    },
+    {
+        "title": "Verde primavera medio",
+        "hex": "#00FA9A"
+    },
+    {
+        "title": "Turquesa medio",
+        "hex": "#48D1CC"
+    },
+    {
+        "title": "Violeta rojo medio",
+        "hex": "#C71585"
+    },
+    {
+        "title": "Azul medianoche",
+        "hex": "#191970"
+    },
+    {
+        "title": "Menta crema",
+        "hex": "#F5FFFA"
+    },
+    {
+        "title": "Rosado bruma",
+        "hex": "#FFE4E1"
+    },
+    {
+        "title": "Mocasin",
+        "hex": "#FFE4B5"
+    },
+    {
+        "title": "Blanco navajo",
+        "hex": "#FFDEAD"
+    },
+    {
+        "title": "Azul marino",
+        "hex": "#000080"
+    },
+    {
+        "title": "Lazo antiguo",
+        "hex": "#FDF5E6"
+    },
+    {
+        "title": "Oliva",
+        "hex": "#808000"
+    },
+    {
+        "title": "Verde olivo",
+        "hex": "#6B8E23"
+    },
+    {
+        "title": "Naranja",
+        "hex": "#FFA500"
+    },
+    {
+        "title": "Naranja rojo",
+        "hex": "#FF4500"
+    },
+    {
+        "title": "Orquidea",
+        "hex": "#DA70D6"
+    },
+    {
+        "title": "Dorado palido",
+        "hex": "#EEE8AA"
+    },
+    {
+        "title": "Verde palido",
+        "hex": "#98FB98"
+    },
+    {
+        "title": "Turquesa palido",
+        "hex": "#AFEEEE"
+    },
+    {
+        "title": "Violeta rojo palido",
+        "hex": "#DB7093"
+    },
+    {
+        "title": "Papaya latigo",
+        "hex": "#FFEFD5"
+    },
+    {
+        "title": "Hojaldre de durazno",
+        "hex": "#FFDAB9"
+    },
+    {
+        "title": "Peru",
+        "hex": "#CD853F"
+    },
+    {
+        "title": "Rosado",
+        "hex": "#FFC0CB"
+    },
+    {
+        "title": "Ciruela",
+        "hex": "#DDA0DD"
+    },
+    {
+        "title": "Azul polvo",
+        "hex": "#B0E0E6"
+    },
+    {
+        "title": "Morado (X11)",
+        "hex": "#A020F0"
+    },
+    {
+        "title": "Morado (W3C)",
+        "hex": "#7F007F"
+    },
+    {
+        "title": "Rojo",
+        "hex": "#FF0000"
+    },
+    {
+        "title": "Marron rosa",
+        "hex": "#BC8F8F"
+    },
+    {
+        "title": "Azul royal",
+        "hex": "#4169E1"
+    },
+    {
+        "title": "Marron cuero",
+        "hex": "#8B4513"
+    },
+    {
+        "title": "Salmon",
+        "hex": "#FA8072"
+    },
+    {
+        "title": "Marron arena",
+        "hex": "#F4A460"
+    },
+    {
+        "title": "Mar verde",
+        "hex": "#2E8B57"
+    },
+    {
+        "title": "Amarillo arena",
+        "hex": "#FFF5EE"
+    },
+    {
+        "title": "Siena",
+        "hex": "#A0522D"
+    },
+    {
+        "title": "Plateado (W3C)",
+        "hex": "#C0C0C0"
+    },
+    {
+        "title": "Azul claro",
+        "hex": "#87CEEB"
+    },
+    {
+        "title": "Azul pizarra",
+        "hex": "#6A5ACD"
+    },
+    {
+        "title": "Gris pizarra",
+        "hex": "#708090"
+    },
+    {
+        "title": "Nieve",
+        "hex": "#FFFAFA"
+    },
+    {
+        "title": "Verde primavera",
+        "hex": "#00FF7F"
+    },
+    {
+        "title": "Azul acero",
+        "hex": "#4682B4"
+    },
+    {
+        "title": "Bronce",
+        "hex": "#D2B48C"
+    },
+    {
+        "title": "Verde azulado",
+        "hex": "#008080"
+    },
+    {
+        "title": "Abrojo",
+        "hex": "#D8BFD8"
+    },
+    {
+        "title": "Tomate",
+        "hex": "#FF6347"
+    },
+    {
+        "title": "Turquesa",
+        "hex": "#40E0D0"
+    },
+    {
+        "title": "Violeta",
+        "hex": "#EE82EE"
+    },
+    {
+        "title": "Trigo",
+        "hex": "#F5DEB3"
+    },
+    {
+        "title": "Blanco",
+        "hex": "#FFFFFF"
+    },
+    {
+        "title": "Blanco humo",
+        "hex": "#F5F5F5"
+    },
+    {
+        "title": "Amarillo",
+        "hex": "#FFFF00"
+    },
+    {
+        "title": "Amarillo verde",
+        "hex": "#9ACD32"
+    }
+];
