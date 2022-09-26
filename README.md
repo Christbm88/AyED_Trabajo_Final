@@ -18,7 +18,6 @@
 | Final | KD Tree implementación | 3 horas
 
 ## Datos de los estudiantes
-- Asmat Fuentes, Franz Rogger
-- Esthela Espinoza, Fausto Danilo
-- Ojeda Mamani, Abel Eberth
-- Paredes Rodriguez, Raybert
+- Christian Néstor Barriga Marcapura
+- Weimar Ccapatinta Huamani
+- Roger Gutierrez Espinoza
